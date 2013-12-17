@@ -404,10 +404,15 @@ module.exports = function (grunt) {
       assets: {
 
         // Assets to watch:
-        files: ['assets/**/*'],
+        files: ['assets/**/*', 'api/**/*', 'views/**/*'],
 
         // When assets are changed:
-        tasks: ['compileAssets', 'linkAssets']
+        tasks: ['compileAssets', 'linkAssets'],
+
+        options: {
+          livereload: true
+        }
+
       }
     }
   });
